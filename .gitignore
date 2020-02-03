@@ -1,0 +1,8 @@
+_archive/log4cxx/configure.user.bat
+_archive/omniORB/configure.user.bat
+_archive/tao/configure.user.bat
+boost/configure.user.bat
+gmock/configure.user.bat
+gtest/configure.user.bat
+log4cplus/configure.user.bat
+qwt/configure.user.bat
