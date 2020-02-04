@@ -19,6 +19,7 @@ echo ACE_ROOT=%ACE_ROOT%
   rem echo.set CYGWIN_PATH=c:\cygwin
   rem echo.set "MSBUILD_PATH=c:\Program Files (x86)\MSBuild\12.0\Bin"
   echo.set "MSBUILD_PATH=c:\Program Files (x86)\MSBuild\14.0\Bin"
+  echo.set SRC_BASE_GROUP=net
   echo.set SRC_BASE_DIR=%SRC_BASE_DIR%
   echo.set SRC_DIR=%SRC_DIR%
   echo.set "BUILD_DIR=%%SRC_DIR%%\tao"

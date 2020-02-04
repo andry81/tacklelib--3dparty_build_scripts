@@ -4,6 +4,7 @@
   echo.@echo off
   echo.
   echo.set "USER_PATH=c:/Program Files/CMake3/bin"
+  echo.set SRC_BASE_GROUP=test
   echo.set SRC_BASE_DIR=googletest
   echo.set SRC_DIR=%%SRC_BASE_DIR%%-release-1.10.0/googletest
   echo.set BUILD_DIR=%%SRC_DIR%%-build

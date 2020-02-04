@@ -6,6 +6,7 @@
   echo.set CYGWIN_PATH=c:\cygwin
   echo.set PYTHON_PATH=c:\Python34
   echo.set PYTHON64_PATH=c:\Python34-x64
+  echo.set SRC_BASE_GROUP=net
   echo.set SRC_BASE_DIR=omniORB
   echo.set SRC_DIR=omniORB_branch_4_2_6333
   echo.set TOOLSET=msvc-14.0

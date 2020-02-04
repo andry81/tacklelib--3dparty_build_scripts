@@ -3,6 +3,7 @@
 (
   echo.@echo off
   echo.
+  echo.set SRC_BASE_GROUP=log
   echo.set SRC_BASE_DIR=log4cxx
   echo.set SRC_DIR=%%SRC_BASE_DIR%%-0.10.0
   echo.set BUILD_DIR=%%SRC_DIR%%-build

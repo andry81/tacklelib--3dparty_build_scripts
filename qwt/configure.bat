@@ -5,6 +5,7 @@
   echo.
   echo.set QT_ROOT=c:/Qt/Qt5_12_6/5.12.6/msvc2017
   echo.rem set QT_ROOT=c:/Qt/Qt5_12_6/5.12.7/mingw73_32
+  echo.set SRC_BASE_GROUP=gui
   echo.set SRC_BASE_DIR=qwt
   echo.set SRC_DIR=qwt-6.1.4
   echo.set BUILD_DIR=%%SRC_DIR%%-build
