@@ -6,7 +6,7 @@
   echo.set "USER_PATH=c:/Program Files/CMake3/bin"
   echo.set SRC_BASE_GROUP=test
   echo.set SRC_BASE_DIR=googletest
-  echo.set SRC_DIR=%%SRC_BASE_DIR%%-release-1.10.0/googletest
+  echo.set SRC_DIR=%%SRC_BASE_DIR%%-1_10_0-release/googletest
   echo.set BUILD_DIR=%%SRC_DIR%%-build
   echo.set TOOLSET=msvc-14.1
   echo.set ADDRESS_MODEL=32
