@@ -23,7 +23,6 @@ _archive/log4cxx/_patches/log4cxx-0.10.0/msvc14/log4cxx/projects/log4cxx.sln -te
 _archive/log4cxx/_patches/log4cxx-0.10.0/msvc14/log4cxx/projects/log4cxx.vcxproj -text
 _archive/log4cxx/_patches/log4cxx-0.10.0/msvc14/log4cxx/projects/log4cxx.vcxproj.filters -text
 _archive/log4cxx/build.bat -text
-_archive/log4cxx/build.impl.bat -text
 _archive/log4cxx/configure.bat -text
 _archive/omniORB/README.txt -text
 _archive/omniORB/__init__.bat -text
@@ -31,13 +30,11 @@ _archive/omniORB/_patches/omniORB-4.2.6346/config/x86_win32_vs_12/config.mk -tex
 _archive/omniORB/_patches/omniORB-4.2.6346/config/x86_win64_vs_14/config.mk -text
 _archive/omniORB/_patches/omniORB-4.2.6346/mk/platforms/x86_win64_vs_14.mk -text
 _archive/omniORB/build.bat -text
-_archive/omniORB/build.impl.bat -text
 _archive/omniORB/build.sh -text
 _archive/omniORB/configure.bat -text
 _archive/tao/README.txt -text
 _archive/tao/__init__.bat -text
 _archive/tao/build.bat -text
-_archive/tao/build.impl.bat -text
 _archive/tao/build.sh.old -text
 _archive/tao/cleanup_TAO.bat -text
 _archive/tao/cleanup_TAO_ACE.bat -text
@@ -48,14 +45,12 @@ boost/README.txt -text
 boost/__init__.bat -text
 boost/_patches/msvc14_boost_1_57_0/boost/config/compiler/visualc.hpp -text
 boost/build.bat -text
-boost/build.impl.bat -text
 boost/configure.bat -text
 boost/preconfigure.bat -text
 /cleanup.impl.bat -text
 gmock/README.txt -text
 gmock/__init__.bat -text
 gmock/build.bat -text
-gmock/build.impl.bat -text
 gmock/configure.bat -text
 gmock/preconfigure.bat -text
 gtest/README.txt -text
@@ -63,7 +58,6 @@ gtest/__init__.bat -text
 gtest/_patches/1.7.0/CMakeLists.txt -text
 gtest/_patches/1.8.0/CMakeLists.txt -text
 gtest/build.bat -text
-gtest/build.impl.bat -text
 gtest/configure.bat -text
 gtest/preconfigure.bat -text
 log4cplus/README.txt -text
@@ -175,7 +169,6 @@ log4cplus/_patches/log4cplus-1.2.0/msvc14/tests/thread_test.vcxproj.filters -tex
 log4cplus/_patches/log4cplus-1.2.0/msvc14/tests/timeformat_test.vcxproj -text
 log4cplus/_patches/log4cplus-1.2.0/msvc14/tests/timeformat_test.vcxproj.filters -text
 log4cplus/build.bat -text
-log4cplus/build.impl.bat -text
 log4cplus/configure.bat -text
 log4cplus/preconfigure.bat -text
 qwt/README.txt -text
@@ -188,6 +181,5 @@ qwt/_patches/QT5.6.0/mkspecs/common/msvc-desktop-x64.conf -text
 qwt/_patches/QT5.6.0/mkspecs/win64-msvc2015/qmake.conf -text
 qwt/_patches/QT5.6.0/mkspecs/win64-msvc2015/qplatformdefs.h -text
 qwt/build.bat -text
-qwt/build.impl.bat -text
 qwt/configure.bat -text
 /reg_env.bat -text
