@@ -5,6 +5,7 @@
   echo.
   echo.rem set "MINGW_ROOT=c:/Qt/Qt5_12_6/Tools/mingw730_32"
   echo.rem set "CYGWIN_ROOT=c:/cygwin/3.0.x"
+  echo.rem set "MSYS_ROOT=c:/msys32/20190524/usr"
   echo.set "WINDOWS_SDK_ROOT=c:/Program Files (x86)/Microsoft SDKs/Windows/v7.1A"
   echo.set SRC_BASE_GROUP=utility
   echo.set SRC_BASE_DIR=boost
@@ -13,6 +14,7 @@
   echo.set TOOLSET=msvc-14.1
   echo.rem set TOOLSET=mingw_gcc
   echo.rem set TOOLSET=cygwin_gcc
+  echo.rem set TOOLSET=msys_gcc
   echo.set VARIANT=release,debug
   echo.set ARCHITECTURE=x86
   echo.set ADDRESS_MODEL=32

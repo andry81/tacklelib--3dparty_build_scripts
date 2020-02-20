@@ -19,6 +19,11 @@ if not "%TOOLSET%" == "%TOOLSET:mingw_=%" (
     set DEV_COMPILER=cygwin_gcc
     set JAM_TOOLSET=gcc
   )
+) else if not "%TOOLSET%" == "%TOOLSET:msys_=%" (
+  if not "%TOOLSET%" == "%TOOLSET:_gcc=%" (
+    set DEV_COMPILER=msys_gcc
+    set JAM_TOOLSET=gcc
+  )
 ) else if "%TOOLSET%" == "msvc-14.2" (
   set DEV_COMPILER=vc2019
 ) else if "%TOOLSET%" == "msvc-14.1" (
@@ -61,7 +66,7 @@ if "%ADDRESS_MODEL%" == "64" (
   set DEVENV_SOLUTION_PLATFORM=Win32
 )
 
-rem collect mingw/cygwin paths from PATH variable
+rem collect mingw/cygwin/msys paths from PATH variable
 set INDEX=1
 set "PREFIX_PATHS="
 :PATH_LOOP
@@ -72,8 +77,10 @@ if not defined PATH_VALUE goto PATH_LOOP_END
 
 if "%PATH_VALUE%" == "%PATH_VALUE:\mingw=%" ^
 if "%PATH_VALUE%" == "%PATH_VALUE:\cygwin=%" ^
+if "%PATH_VALUE%" == "%PATH_VALUE:\msys=%" ^
 if "%PATH_VALUE%" == "%PATH_VALUE:/mingw=%" ^
-if "%PATH_VALUE%" == "%PATH_VALUE:/cygwin=%" goto PATH_LOOP
+if "%PATH_VALUE%" == "%PATH_VALUE:/cygwin=%" ^
+if "%PATH_VALUE%" == "%PATH_VALUE:/msys=%" goto PATH_LOOP
 
 if defined PREFIX_PATHS (
   set "PREFIX_PATHS=%PREFIX_PATHS%;%PATH_VALUE%"
@@ -96,7 +103,8 @@ if defined PREFIX_PATHS (
 if defined USER_PATH set "PATH=%PATH%;%USER_PATH%"
 
 if "%TOOLSET%" == "%TOOLSET:mingw_=%" ^
-if "%TOOLSET%" == "%TOOLSET:cygwin_=%" goto IGNORE_PATH_UPDATE
+if "%TOOLSET%" == "%TOOLSET:cygwin_=%" ^
+if "%TOOLSET%" == "%TOOLSET:msys_=%" goto IGNORE_PATH_UPDATE
 
 if defined MINGW_ROOT (
   rem update path variable
@@ -111,6 +119,13 @@ if defined MINGW_ROOT (
   for /F "eol=| tokens=* delims=" %%i in ("!PATH!") do (
     endlocal
     set "PATH=%%i;%CYGWIN_ROOT%\bin"
+  )
+) else if defined MSYS_ROOT (
+  rem update path variable
+  setlocal ENABLEDELAYEDEXPANSION
+  for /F "eol=| tokens=* delims=" %%i in ("!PATH!") do (
+    endlocal
+    set "PATH=%%i;%MSYS_ROOT%\bin"
   )
 )
 
