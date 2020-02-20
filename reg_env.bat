@@ -12,12 +12,12 @@ set JAM_TOOLSET=%TOOLSET%
 if not "%TOOLSET%" == "%TOOLSET:mingw_=%" (
   if not "%TOOLSET%" == "%TOOLSET:_gcc=%" (
     set DEV_COMPILER=mingw_gcc
-    set JAM_TOOLSET=gcc-mingw
+    set JAM_TOOLSET=gcc
   )
 ) else if not "%TOOLSET%" == "%TOOLSET:cygwin_=%" (
   if not "%TOOLSET%" == "%TOOLSET:_gcc=%" (
     set DEV_COMPILER=cygwin_gcc
-    set JAM_TOOLSET=gcc-cygwin
+    set JAM_TOOLSET=gcc
   )
 ) else if "%TOOLSET%" == "msvc-14.2" (
   set DEV_COMPILER=vc2019
@@ -95,7 +95,8 @@ if defined PREFIX_PATHS (
 
 if defined USER_PATH set "PATH=%PATH%;%USER_PATH%"
 
-if "%TOOLSET%" == "%TOOLSET:mingw_=%" goto IGNORE_MINGW_PATH_UPDATE
+if "%TOOLSET%" == "%TOOLSET:mingw_=%" ^
+if "%TOOLSET%" == "%TOOLSET:cygwin_=%" goto IGNORE_PATH_UPDATE
 
 if defined MINGW_ROOT (
   rem update path variable
@@ -104,9 +105,18 @@ if defined MINGW_ROOT (
     endlocal
     set "PATH=%%i;%MINGW_ROOT%\bin"
   )
+) else if defined CYGWIN_ROOT (
+  rem update path variable
+  setlocal ENABLEDELAYEDEXPANSION
+  for /F "eol=| tokens=* delims=" %%i in ("!PATH!") do (
+    endlocal
+    set "PATH=%%i;%CYGWIN_ROOT%\bin"
+  )
 )
 
-:IGNORE_MINGW_PATH_UPDATE
+echo %PATH%
+
+:IGNORE_PATH_UPDATE
 
 if "%TOOLSET%" == "%TOOLSET:msvc-=%" ^
 if "%TOOLSET%" == "%TOOLSET:mingw_=%" ^
