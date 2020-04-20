@@ -171,6 +171,10 @@ log4cplus/_patches/log4cplus-1.2.0/msvc14/tests/timeformat_test.vcxproj.filters 
 log4cplus/build.bat -text
 log4cplus/configure.bat -text
 log4cplus/preconfigure.bat -text
+log4cpp/README.txt -text
+log4cpp/__init__.bat -text
+log4cpp/build.bat -text
+log4cpp/configure.bat -text
 qwt/README.txt -text
 qwt/__init__.bat -text
 qwt/_patches/QT4.8.6/mkspecs/win32-msvc2015/qmake.conf -text
