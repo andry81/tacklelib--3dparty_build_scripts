@@ -52,15 +52,16 @@ call :CMD cmake --build . --config "%%VARIANT_VALUE%%" || exit /b
 
 if /i "%VARIANT_VALUE%" == "debug" (
   set "MSVC_LIB_SUFFIX=d"
+  call :CMD rename "%%BUILD_ROOT%%\%%VARIANT_VALUE%%\log4cpp.lib" "log4cpp%%MSVC_LIB_SUFFIX%%.lib"
 ) else (
   set "MSVC_LIB_SUFFIX="
 )
 
 if not "%TOOLSET%" == "%TOOLSET:msvc-=%" (
   if not "%ADDRESS_MODEL%" == "64" (
-    call :XCOPY_FILE "%%BUILD_ROOT%%\%%VARIANT_VALUE%%" "log4cpp.lib"    "%%BUILD_ROOT%%\lib\x86\%%VARIANT_VALUE%%" /Y /D /H || exit /b
+    call :XCOPY_FILE "%%BUILD_ROOT%%\%%VARIANT_VALUE%%" "log4cpp%%MSVC_LIB_SUFFIX%%.lib"    "%%BUILD_ROOT%%\lib\x86" /Y /D /H || exit /b
   ) else (
-    call :XCOPY_FILE "%%BUILD_ROOT%%\%%VARIANT_VALUE%%" "log4cpp.lib"    "%%BUILD_ROOT%%\lib\x64\%%VARIANT_VALUE%%" /Y /D /H || exit /b
+    call :XCOPY_FILE "%%BUILD_ROOT%%\%%VARIANT_VALUE%%" "log4cpp%%MSVC_LIB_SUFFIX%%.lib"    "%%BUILD_ROOT%%\lib\x64" /Y /D /H || exit /b
   )
 )
 
