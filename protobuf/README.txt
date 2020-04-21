@@ -1,5 +1,5 @@
 * README.txt
-* log4cpp
+* protobuf
 
 1. PREREQUISITES
 2. CONFIGURE

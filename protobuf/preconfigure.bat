@@ -15,10 +15,9 @@ chcp 65001
 
 if not exist "%BUILD_ROOT%\" mkdir "%BUILD_ROOT%"
 
+rem call :XCOPY_DIR "%%BUILD_SRC%%\cmake" "%%BUILD_ROOT%%\cmake" /S /Y /D || exit /b
 call :CREATE_DIR_LINK "%%BUILD_ROOT%%\src" "%%BUILD_SRC%%\src" || exit /b
-call :CREATE_DIR_LINK "%%BUILD_ROOT%%\include" "%%BUILD_SRC%%\include" || exit /b
-
-call :XCOPY_DIR "%%BUILD_SRC%%/msvc14" "%%BUILD_ROOT%%/msvc14" /S /Y /D || exit /b
+rem call :CREATE_FILE_LINK "%%BUILD_ROOT%%\protobuf.pc.in" "%%BUILD_SRC%%\protobuf.pc.in" || exit /b
 
 pause
 

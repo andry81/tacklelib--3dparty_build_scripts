@@ -11,6 +11,8 @@ if %UAC_MODE%0 EQU 0 (
   exit /b
 )
 
+chcp 65001
+
 if not exist "%BUILD_ROOT%\" mkdir "%BUILD_ROOT%"
 
 call :CREATE_DIR_LINK "%%BUILD_ROOT%%\boost" "%%BUILD_SRC%%\boost" || exit /b
@@ -23,6 +25,8 @@ call :CREATE_FILE_LINK "%%BUILD_ROOT%%\boostcpp.jam" "%%BUILD_SRC%%\boostcpp.jam
 
 call :CREATE_FILE_LINK "%%BUILD_ROOT%%\Jamroot" "%%BUILD_SRC%%\Jamroot" || exit /b
 call :CREATE_FILE_LINK "%%BUILD_ROOT%%\project-config.jam" "%%BUILD_SRC%%\project-config.jam" || exit /b
+
+rem call :XCOPY_DIR "%%BUILD_SRC%%/msvc14" "%%BUILD_ROOT%%/msvc14" /S /Y /D || exit /b
 
 pause
 

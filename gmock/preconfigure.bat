@@ -11,6 +11,8 @@ if %UAC_MODE%0 EQU 0 (
   exit /b
 )
 
+chcp 65001
+
 if not exist "%BUILD_ROOT%\" mkdir "%BUILD_ROOT%"
 
 call :CREATE_DIR_LINK "%%BUILD_ROOT%%\src" "%%BUILD_SRC%%\src" || exit /b

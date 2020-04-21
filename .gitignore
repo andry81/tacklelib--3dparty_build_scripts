@@ -14,5 +14,7 @@ log4cplus/.log
 log4cplus/configure.user.bat
 log4cpp/.log
 log4cpp/configure.user.bat
+protobuf/.log
+protobuf/configure.user.bat
 qwt/.log
 qwt/configure.user.bat

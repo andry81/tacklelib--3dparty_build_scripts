@@ -175,6 +175,11 @@ log4cpp/README.txt -text
 log4cpp/__init__.bat -text
 log4cpp/build.bat -text
 log4cpp/configure.bat -text
+protobuf/README.txt -text
+protobuf/__init__.bat -text
+protobuf/build.bat -text
+protobuf/configure.bat -text
+protobuf/preconfigure.bat -text
 qwt/README.txt -text
 qwt/__init__.bat -text
 qwt/_patches/QT4.8.6/mkspecs/win32-msvc2015/qmake.conf -text
