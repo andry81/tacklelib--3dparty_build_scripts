@@ -18,14 +18,14 @@
 -------------------------------------------------------------------------------
 2. CONFIGURE
 -------------------------------------------------------------------------------
-1. run `preconfigure.bat` from the `_build` directory.
-2. run `configure.bat` from the `_build` directory.
-3. edit `configure.user.bat`.
+1. run `preconfigure.bat`
+2. run `configure.bat`
+3. edit `configure.user.bat`
 
 -------------------------------------------------------------------------------
 3. BUILD
 -------------------------------------------------------------------------------
-run `build.bat` from the `_build` directory
+run `build.bat`
 
 -------------------------------------------------------------------------------
 4. POSTINSTALL

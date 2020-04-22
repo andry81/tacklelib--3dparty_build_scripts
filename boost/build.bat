@@ -97,7 +97,7 @@ rem )
 if not exist "%BUILD_ROOT%\" mkdir "%BUILD_ROOT%"
 
 call :CMD pushd "%%BUILD_ROOT%%" && (
-  call :CMD "%%BUILD_SRC%%/b2.exe" "-sBOOST_ROOT=%BUILD_SRC%" %%BOOST_BUILD_CMD_LINE%% %%BOOST_LIB_CONFIG_ARGS%% stage %%3 %%4 %%5 %%6 %%7 %%8 %%9
+  call :CMD "%%BUILD_ROOT%%/b2.exe" "-sBOOST_ROOT=%BUILD_ROOT%" %%BOOST_BUILD_CMD_LINE%% %%BOOST_LIB_CONFIG_ARGS%% stage %%3 %%4 %%5 %%6 %%7 %%8 %%9
   call :CMD popd
 )
 

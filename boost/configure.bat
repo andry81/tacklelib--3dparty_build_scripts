@@ -9,7 +9,7 @@
   echo.set "WINDOWS_SDK_ROOT=c:/Program Files (x86)/Microsoft SDKs/Windows/v7.1A"
   echo.set SRC_BASE_GROUP=utility
   echo.set SRC_BASE_DIR=boost
-  echo.set SRC_DIR=%%SRC_BASE_DIR%%_1_72_0
+  echo.set SRC_DIR=%%SRC_BASE_DIR%%-1_72_0-release
   echo.set BUILD_DIR=%%SRC_DIR%%-build
   echo.set TOOLSET=msvc-14.1
   echo.rem set TOOLSET=mingw_gcc
