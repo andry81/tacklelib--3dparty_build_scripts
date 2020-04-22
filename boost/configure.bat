@@ -10,7 +10,7 @@
   echo.set SRC_BASE_GROUP=utility
   echo.set SRC_BASE_DIR=boost
   echo.set SRC_DIR=%%SRC_BASE_DIR%%-1_72_0-release
-  echo.set BUILD_DIR=%%SRC_DIR%%-build
+  echo.set BUILD_DIR=%%SRC_DIR%%
   echo.set TOOLSET=msvc-14.1
   echo.rem set TOOLSET=mingw_gcc
   echo.rem set TOOLSET=cygwin_gcc
