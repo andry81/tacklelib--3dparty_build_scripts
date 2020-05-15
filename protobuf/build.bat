@@ -39,7 +39,11 @@ pause
 exit /b
 
 :BUILD
-call :CMD cmake -G "%%CMAKE_GENERATOR%%" "-Dprotobuf_MSVC_STATIC_RUNTIME=%%protobuf_MSVC_STATIC_RUNTIME%%" "-Dprotobuf_BUILD_SHARED_LIBS=%%protobuf_BUILD_SHARED_LIBS%%" "%%BUILD_SRC%%/cmake" || exit /b 1
+call :CMD cmake -G "%%CMAKE_GENERATOR%%" ^
+  "-Dprotobuf_MSVC_STATIC_RUNTIME=%%protobuf_MSVC_STATIC_RUNTIME%%" ^
+  "-Dprotobuf_BUILD_SHARED_LIBS=%%protobuf_BUILD_SHARED_LIBS%%" ^
+  "-Dprotobuf_BUILD_TESTS=%%protobuf_BUILD_TESTS%%" ^
+  "%%BUILD_SRC%%/cmake" || exit /b 1
 
 set VARIANT_VALUE_INDEX=1
 
