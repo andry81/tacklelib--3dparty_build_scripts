@@ -15,7 +15,8 @@ chcp 65001
 
 if not exist "%BUILD_ROOT%\" mkdir "%BUILD_ROOT%"
 
-call :XCOPY_DIR "%%BUILD_SRC%%\include" "%%BUILD_ROOT%%\include" /S /Y /D || exit /b
+rem call :XCOPY_DIR "%%BUILD_SRC%%\include" "%%BUILD_ROOT%%\include" /S /Y /D || exit /b
+call :CREATE_DIR_LINK "%%BUILD_ROOT%%\include" "%%BUILD_SRC%%\include" || exit /b
 rem call :CREATE_DIR_LINK "%%BUILD_ROOT%%\src" "%%BUILD_SRC%%\src" || exit /b
 
 pause

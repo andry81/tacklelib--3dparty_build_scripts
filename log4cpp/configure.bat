@@ -11,4 +11,6 @@
   echo.set TOOLSET=msvc-14.1
   echo.set ADDRESS_MODEL=32
   echo.set VARIANT=release,debug
+  rem echo.set CMAKE_POLICY_DEFAULT_CMP0091=NEW
+  rem echo.set "CMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded$<$<CONFIG:Debug>:Debug>"
 ) > "%~dp0configure.user.bat"
